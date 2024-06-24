@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #1E6DF0;
+  --background-light: #f4faff;
+  --border-color: #F4F4F4;
+  --text-primary: #333;
+  --font-family-base: 'Roboto', sans-serif;
+}
+
+.cards-section .wpb_row {
+  display: flex;
+  column-gap: 32px;
+}
+
+.cards-section .wpb-content-wrapper {
+  margin-top: 75px;
+}
+
+.cards-section figure {
+  margin-bottom: 30px;
+}
+
+.cards-section figure img {
+  object-fit: cover;
+  height: 352px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.cards-section .vc_custom_heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: capitalize;
+  font-family: var(--font-family-base) !important;
+  padding-inline: 24px;
+  margin-bottom: 7px;
+  letter-spacing: -0.7px;
+}
+
+.cards-section .wpb_text_column {
+  padding-inline: 24px;
+  margin-bottom: 24px;
+}
+
+.cards-section .wpb_text_column p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cards-section .wpb_text_column.tags {
+  padding-inline: 22px;
+}
+
+.cards-section .wpb_column {
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  padding-bottom: 24px;
+}
+
+.cards-section .tags ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-section .tags ul li {
+  background-color: var(--background-light);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+.cards-section .tags ul li:last-child {
+  margin-right: 0;
+}
+
+.cards-section .vc_do_btn {
+  padding-inline: 24px;
+}
+
+.cards-section button {
+  background: var(--primary-color);
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.cards-section button:hover {
+  opacity: 0.8;
+}
+
+/* loading animation */
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.spinner .double-bounce1,
+.spinner .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.spinner .double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+}
+
+/* Media query for screen width 1920px */
+@media (min-width: 1900px) {
+  .cards-section figure img {
+    height: 376px;
+  }
+}
+
+/* Media query for screen width 2000px and above */
+@media (min-width: 2000px) {
+  .cards-section figure img {
+    height: 400px;
+  }
+}
