@@ -1,19 +1,21 @@
-import fetchPosts from '../lib/fetchPosts';
+import Banner from "@/components/Banner/page";
+import Cards from "@/components/Cards/page";
+import Contact from "@/components/Contact/page";
+import Footer from "@/components/Footer/page";
+import Header from "@/components/Header/page";
 
-export default async function Page() {
-  const posts = await fetchPosts();
-
+const HomePage = () => {
   return (
-    <div>
-      <h1>Posts</h1>
-      <ul>
-        {posts.map((post, index) => (
-          <li key={index}>
-            <h2>{post.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Banner />
+        <Cards />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
-}
+};
+
+export default HomePage;
